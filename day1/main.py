@@ -1,4 +1,4 @@
-# “Band name generator program”
+# “Band name generator python program”
 
 # Create a greeting for your program.
 print("Welcome to the Band Name Generator.")
