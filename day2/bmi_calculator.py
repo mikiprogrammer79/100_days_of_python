@@ -1,11 +1,11 @@
 # The BMI is calculated by dividing an adult's weight in kilograms by their height in metres squared.
 # Kg/m2
 
-print("Your BMI result will be displayed as a number with one of these weight categories:")
-print("- underweight")
-print("- a healthy weight")
-print("- overweight")
-print("- obese")
+print("Your BMI result will be displayed as int(number) with one of these weight categories:")
+print("- underweight: <18.5")
+print("- a healthy weight: 18.5 - 24.9")
+print("- overweight: 25 - 29.9")
+print("- obese: >= 30")
 
 # First input: weight in kilograms
 weight = input("What's your weight in kilograms(kg)? \n")
