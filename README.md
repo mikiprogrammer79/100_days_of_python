@@ -7,4 +7,6 @@ Although I have been coding in Python before, I have decided to start from the b
 I will add, commit and push the code of the day in one particular folder.
 ### Day 1: 
 Printing, commenting, debugging, string manipulation and variables.
+### Day 2:
+Data types, Numbers, Operations, Type Conversion, f-Strings
 
