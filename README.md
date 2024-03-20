@@ -9,4 +9,6 @@ I will add, commit and push the code of the day in one particular folder.
 Printing, commenting, debugging, string manipulation and variables.
 ### Day 2:
 Data types, Numbers, Operations, Type Conversion, f-Strings
+### Day 3:
+Conditional Statements, Logical Operators, Code Blocks and Scope
 
