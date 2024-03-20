@@ -13,5 +13,5 @@ num_people = input("How many people to split the bill?\n")
 # Calculate how much each person should pay
 total_bill = int(bill) + (int(tip) / 100) * int(bill) # print(type(total_bill)) <class 'float'>
 each_person_bill = total_bill / int(num_people)
-print(f"Each person should pay: ${each_person_bill}")
+print(f"Each person should pay: ${round(each_person_bill, 2)}")
 
