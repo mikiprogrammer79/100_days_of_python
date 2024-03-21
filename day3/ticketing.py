@@ -14,12 +14,20 @@ if height >= 120:
     # Prompt the user for his age and calculate the rollercoaster ticket price
     age = int(input("How old are you? "))
     if age < 12:
-        print("Ticket Price: $5.00")
+        print("Child Ticket Price: $5.00")
+        ticket = 5.00
     elif age <= 18:
-        print("Ticket Price: $7.00")
+        print("Young Ticket Price: $7.00")
+        ticket = 7.00
     else:
-        print("Ticket Price: $12.00")
-
+        print("Adult Ticket Price: $12.00")
+        ticket = 12.00
+    # Prompt the user to type Y or N in case they want a photo taken
+    photo = input("Do you want a photo taken? Y or N: ").lower()
+    if photo == "y":
+        print(f"Total price: ${format(ticket + 3, '.2f')}") # Price for a photo taken $3.00
+    else:
+        print(f"Total price: ${format(ticket, '.2f')}")    
 else:
     print(f"Sorry, you are {height}cm tall. You need to grow {120 - height}cm more.")
 
