@@ -13,5 +13,6 @@ Data types, Numbers, Operations, Type Conversion, f-Strings
 Conditional Statements, Logical Operators, Code Blocks and Scope
 ### Day 4:
 Randomisation and Python Lists
-
+### Day 5:
+Loops
 
