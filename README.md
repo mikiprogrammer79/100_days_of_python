@@ -11,4 +11,7 @@ Printing, commenting, debugging, string manipulation and variables.
 Data types, Numbers, Operations, Type Conversion, f-Strings
 ### Day 3:
 Conditional Statements, Logical Operators, Code Blocks and Scope
+### Day 4:
+Randomisation and Python Lists
+
 
