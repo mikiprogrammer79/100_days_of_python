@@ -58,3 +58,11 @@ print(f"Reverse list: {fruits}")
 # Return a shallow copy of the list. Equivalent to a[:].
 shopping_list = fruits.copy()
 print(f"This is my shopping list: {shopping_list}")
+
+# Create a list from a String of characters using the split() method. And print a random name y the created new list
+import random
+names = "John, Mary, Ella, Alex, Tony, Kevin"
+names_list = names.split(", ")
+random_index = random.randint(0, (len(names_list) - 1)) # Create a random Index
+print(names_list[random_index]) # Print a random name in names_list
+
