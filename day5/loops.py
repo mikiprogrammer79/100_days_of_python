@@ -4,3 +4,4 @@
 my_list = ["Apple", "Cherry", "Banana"]
 for item in my_list:
     print(item)
+    print(item + " pie")
