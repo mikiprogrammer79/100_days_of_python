@@ -15,4 +15,6 @@ Conditional Statements, Logical Operators, Code Blocks and Scope
 Randomisation and Python Lists
 ### Day 5:
 Loops
+### Day 6:
+Functions, Code Blocks and While loops
 
