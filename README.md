@@ -19,3 +19,5 @@ Loops
 Functions, Code Blocks and While loops
 ### Day 7:
 Hangman Game
+### Day 8:
+Function Parameters and Caesar Chipher
