@@ -17,4 +17,5 @@ Randomisation and Python Lists
 Loops
 ### Day 6:
 Functions, Code Blocks and While loops
-
+### Day 7:
+Hangman Game
