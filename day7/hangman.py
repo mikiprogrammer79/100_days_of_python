@@ -1,6 +1,7 @@
 # Hangman Game
 
 import random
+import os
 
 words = ["greenkeeper", "beekeeper", "furniture", "diamond", "coffee"]
 
@@ -71,14 +72,15 @@ ascii_art = [
      |      (_)
      |      \|/
      |       |
-     |      / \
+     |      / /
      |
  jgs_|___
-    '''
+    ''',
     ]
 
-# Welcome to the game
-print('''
+# Welcome to the game with logo
+def logo():
+    print('''
  _                                             
 | |                                            
 | |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
@@ -96,12 +98,17 @@ random_word = random.choice(words)
 blanks = []
 for i in range(len(random_word)):
     blanks.append("_ ")
-print("".join(blanks))
+
 
 # Control Flow and logic of the game
 game_alive = 0
 while game_alive < 6:
     
+    # Clear the screen and add logo
+    os.system("clear")
+    logo()
+    print(ascii_art[game_alive])
+    print("".join(blanks))
     # Ask the user to guess a letter
     user_guess = input("Guess a letter: ").lower()
     if user_guess in blanks:
@@ -132,4 +139,5 @@ while game_alive < 6:
         
     
 if game_alive == 6:
+    print(ascii_art[6])
     print("Sorry, You've lost the game. Try again")
