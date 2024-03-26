@@ -21,3 +21,5 @@ Functions, Code Blocks and While loops
 Hangman Game
 ### Day 8:
 Function Parameters and Caesar Chipher
+### Day 9:
+Dictionaries and Nesting
