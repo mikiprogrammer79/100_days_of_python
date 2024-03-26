@@ -4,7 +4,7 @@ import string
 import os 
 
 # Start the program
-print('''
+logo = '''
       _       _               
      (_)     | |              
   ___ _ _ __ | |__   ___ _ __ 
@@ -13,7 +13,7 @@ print('''
  \___|_| .__/|_| |_|\___|_|   
        | |                    
        |_|                    
-      ''')
+      '''
 
 # Encryption
 def encode(message):    
@@ -48,6 +48,9 @@ def decode(message):
 # While loop
 alive = True
 while alive:
+    #Print logo
+    print(logo)
+
     # Prompt the user to Encode or Decode a message
     encryption_type = input("Type 'encode' to encrypt, or type 'decode' to decrypt:\n").lower()
     user_message = input("Type your message:\n")
@@ -73,4 +76,5 @@ while alive:
     prompt = input("Type 'yes' if you want to go again, or 'no' for exit: ").lower()
     if prompt == "no":
         alive = False
-    print("\n")
+    else:
+        os.system("clear")
