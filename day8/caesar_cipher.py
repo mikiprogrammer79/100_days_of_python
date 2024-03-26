@@ -44,24 +44,33 @@ def decode(message):
         else:
             decoded_list.append(item)
     print(f'Decoded message: {"".join(decoded_list)}')
-    
-# Prompt the user to Encode or Decode a message
-encryption_type = input("Type 'encode' to encrypt, or type 'decode' to decrypt:\n")
-user_message = input("Type your message:\n")
-shift_number = int(input("Type the shift number:\n"))
 
-# Create alphabet list and the alpha_index_list
-alpha = list(string.ascii_letters)
-alpha_index_list = []
-for i in range(0, len(user_message)):
-    if user_message[i] in alpha:
-        index = alpha.index(user_message[i])
-        alpha_index_list.append(index)
-    else:
-        alpha_index_list.append(user_message[i])
-# print(alpha_index_list)
+# While loop
+alive = True
+while alive:
+    # Prompt the user to Encode or Decode a message
+    encryption_type = input("Type 'encode' to encrypt, or type 'decode' to decrypt:\n").lower()
+    user_message = input("Type your message:\n")
+    shift_number = int(input("Type the shift number:\n"))
 
-if encryption_type == "encode":
-    encode(user_message)
-elif encryption_type == "decode":
-    decode(user_message)
+    # Create alphabet list and the alpha_index_list
+    alpha = list(string.ascii_letters)
+    alpha_index_list = []
+    for i in range(0, len(user_message)):
+        if user_message[i] in alpha:
+            index = alpha.index(user_message[i])
+            alpha_index_list.append(index)
+        else:
+            alpha_index_list.append(user_message[i])
+    # print(alpha_index_list)
+
+    if encryption_type == "encode":
+        encode(user_message)
+    elif encryption_type == "decode":
+        decode(user_message)
+
+    # Keep (alive = True) or stop (alive = False) running the program; Prompt user:
+    prompt = input("Type 'yes' if you want to go again, or 'no' for exit: ").lower()
+    if prompt == "no":
+        alive = False
+    print("\n")
