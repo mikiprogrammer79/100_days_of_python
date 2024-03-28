@@ -35,7 +35,7 @@ def exp(a, b):
     exp = a ** b
     return exp
 
-# Create operators/operations
+# Create operators/operations dictionary
 operations = {
     "+": add,
     "-": sub,
@@ -48,12 +48,13 @@ start()
 
 # Prompt the user to type a number
 number1 = float(input("First number: "))
+# Show user different operators
+for operator in operations:
+    print(operator)
 memory = [number1]
 alive = True
 while alive:
     # Prompt the user to pick up an operator
-    for operator in operations:
-        print(operator)
     user_operator = input("Pick up an operator: ")
     # Prompt user to type second number
     number2 = float(input("Next number: "))
