@@ -23,3 +23,5 @@ Hangman Game
 Function Parameters and Caesar Chipher
 ### Day 9:
 Dictionaries and Nesting
+### Day 10:
+Functions with output
