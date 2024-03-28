@@ -35,6 +35,15 @@ def exp(a, b):
     exp = a ** b
     return exp
 
+# Create operators/operations
+operations = {
+    "+": add,
+    "-": sub,
+    "*": mult,
+    "/": div,
+    "**": exp,
+}
+
 start()
 
 # Prompt the user to type a number
@@ -43,28 +52,14 @@ memory = [number1]
 alive = True
 while alive:
     # Prompt the user to pick up an operator
-    user_operator = input("+\n-\n*\n/\n**\nPick up an operator: ")
+    for operator in operations:
+        print(operator)
+    user_operator = input("Pick up an operator: ")
     # Prompt user to type second number
     number2 = float(input("Next number: "))
     # Calculator
-    result = 0
-    if user_operator == "+":
-        result = add(memory[-1], number2)
-        print(f"{memory[-1]} + {number2} = {result}")
-    elif user_operator == "-":
-        result = sub(memory[-1], number2)
-        print(f"{memory[-1]} - {number2} = {result}")
-    elif user_operator == "*":
-        result = mult(memory[-1], number2)
-        print(f"{memory[-1]} * {number2} = {result}")
-    elif user_operator == "/":
-        result = div(memory[-1], number2)
-        print(f"{memory[-1]} / {number2} = {result}")
-    elif user_operator == "**":
-        result = exp(memory[-1], number2)
-        print(f"{memory[-1]}exp{number2} = {result}")
-    else:
-        print("Wrong operator")
+    result = operations[user_operator](memory[-1], number2) # add/sub/mult/div/exp(a, b)
+    print(f"{memory[-1]} {user_operator} {number2} = {result}")
 
     # Prompt the user to continue or exit
     if input(f"Type 'y' to continue calculating with {result}. Press Enter for exit: ").lower() == "y":
