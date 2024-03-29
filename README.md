@@ -27,3 +27,5 @@ Dictionaries and Nesting
 Functions with output
 ### Day 11:
 Blackjack Game
+### Day 12:
+Scope, Global and Local variables
