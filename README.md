@@ -29,3 +29,5 @@ Functions with output
 Blackjack Game
 ### Day 12:
 Scope, Global and Local variables
+### Day 13:
+Debugging
