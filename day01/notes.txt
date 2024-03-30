@@ -1,0 +1,25 @@
+Day 1 is about printing, commenting, debugging, string manipulation and variables.
+print(“Hello World”) -> It will print in the console the string of characters.
+Print Modifiers:
+    - print("A 'single quote' inside a double quote")
+    - print('A "double quote" inside a single quote')
+    - print("Otherwise \"escape the quote\" inside a double quote")
+
+String concatenation: stringA + StringB —> “A” + “ “ + “B” / “A “ + “B”
+
+New lines -> “\n”; print(“Uno/nDos/nTres”)
+
+Debugging: SyntaxError and IndentationError
+
+The Python input function -> input(prompt)
+What I type after the prompt is the data that will substitute that line of code
+	- print(“Hello “ + input(“What’s your name? “))
+
+Comments: 
+#This is a comment. The shortcut to include a line into a comment CMD+/. The opposite, turn a comment into a line of executable code CMD+z.
+
+Number of characters in one string —> len(string)
+
+Variables -> name = input(“Type the data to be store in that variable name”)
+
+Variable Naming -> Sneak_case ; Numbers at the end, never at the beginning (SyntaxError: invalid syntax); If we type a variable name wrong or is not defined (SyntaxError: name “x” is not define).
