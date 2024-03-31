@@ -1,0 +1,14 @@
+Day 13. Debugging
+
+Removing bugs from your code. (Grace Hooper notes -> bug found.
+
+1. Describe the problem to understand how it works.
+2. Reproduce the bug.
+3. Play computer and evaluate each line.
+4. Fixing errors and watching for red underlines.
+5. Use print() statement to help debugging.
+6. Use a debugger (python tutor, Thonny…)
+7. Take a brake
+8. Ask a friend, Stackoverflow…
+9. Run your code often. Leaving all to the end could be tedious.
+10. Check Python Documentation
