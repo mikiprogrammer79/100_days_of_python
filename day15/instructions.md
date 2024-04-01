@@ -16,7 +16,7 @@
 ## Pseudo-code:
 ## Prompt (What would you like? (espresso/latte/cappuccino): )
 ###    report -> Show all resources left in the machine
-###    cls -> Clear screen
+###    cls -> Clear screen and reset machine with full resources
 ###    espresso/latte/cappuccino
         A. Check there are sufficient resources
         B. If resources, "Please, insert coins"
