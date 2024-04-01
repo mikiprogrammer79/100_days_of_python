@@ -17,6 +17,7 @@
 ## Prompt (What would you like? (espresso/latte/cappuccino): )
 ###    report -> Show all resources left in the machine
 ###    cls -> Clear screen and reset machine with full resources
+###    exit -> Power off the machine
 ###    espresso/latte/cappuccino
         A. Check there are sufficient resources
         B. If resources, "Please, insert coins"
