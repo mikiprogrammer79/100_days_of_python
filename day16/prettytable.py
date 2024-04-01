@@ -13,4 +13,6 @@ table.add_row(["Sydney", 2058, 4336374, 1214.8])
 table.add_row(["Melbourne", 1566, 3806092, 646.9])
 table.add_row(["Perth", 5386, 1554769, 869.4])
 
+table.align = "l"
+
 print(table)
