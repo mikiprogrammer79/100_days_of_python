@@ -9,14 +9,6 @@ money = MoneyMachine()
 alive = True
 while alive:
     prompt = input("What would you like? (espresso/latte/cappuccino): ").lower()
-
-    if prompt == "latte":
-        menu_item = menu.menu[0]
-    elif prompt == "espresso":
-        menu_item = menu.menu[1]
-    elif prompt == "cappuccino":
-        menu_item = menu.menu[2]
-
     # Print report
     if prompt == "report":
         coffee.report()
