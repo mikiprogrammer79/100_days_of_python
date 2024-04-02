@@ -37,3 +37,5 @@ Higher Lower Game
 Coffee Machine 
 ### Day 16:
 Object Oriented Programming (OOP)
+### Day 17:
+Creating Classes
