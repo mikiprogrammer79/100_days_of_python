@@ -22,14 +22,14 @@ while alive:
         coffee.report()
     elif prompt == "latte" or prompt == "cappuccino" or prompt == "espresso":
         # check resources sufficient?
-        if coffee.is_resource_sufficient(menu_item):
+        if coffee.is_resource_sufficient(menu.find_drink(prompt)):
             # Process coins
-            enough_coins = money.make_payment(menu_item.cost)
+            enough_coins = money.make_payment(menu.find_drink(prompt).cost)
             # Check transaction successful
             while not enough_coins:
-                money.make_payment(menu_item.cost)
+                money.make_payment(menu.find_drink(prompt).cost)
             # Make coffee
-            coffee.make_coffee(menu_item)
+            coffee.make_coffee(menu.find_drink(prompt))
 
     elif prompt == "exit":
         alive = False        
