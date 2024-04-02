@@ -39,3 +39,5 @@ Coffee Machine
 Object Oriented Programming (OOP)
 ### Day 17:
 Creating Classes
+### Day 18:
+Turtle Graphics, Tuples and Importing Modules
