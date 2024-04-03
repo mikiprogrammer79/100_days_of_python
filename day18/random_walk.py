@@ -10,17 +10,15 @@ colours = ["coral", "brown", "orange", "red", "blue", "yellow", "green", "purple
 
 pen_width = 1
 
+heading = [0, 90, 180, 270]
 for i in range(33):
     random_length = random.randint(1, 100)
-    random_index = random.randint(0, (len(colours) - 1))
-    random_degree = random.randint(0, 360)
-    turtle.color(colours[random_index])
+    random_colour = random.choice(colours)
+    turtle.color(random_colour)
     turtle.pensize(pen_width)
     pen_width += 1
     turtle.forward(random_length)
-    turtle.right(random_degree)
-    turtle.backward(random_length)
-    turtle.right(45)
+    turtle.setheading(random.choice(heading))
 
 # Call screen and exit on click
 
