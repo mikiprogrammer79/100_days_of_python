@@ -6,15 +6,17 @@ import random
 
 turtle = t.Turtle()
 
-colours = ["coral", "brown", "orange", "red", "blue", "yellow", "green", "purple"]
-
 pen_width = 1
 
 heading = [0, 90, 180, 270]
+
+t.colormode(255)
+
 for i in range(33):
     random_length = random.randint(1, 100)
-    random_colour = random.choice(colours)
-    turtle.color(random_colour)
+    # random_colour = random.choice(colours)
+    rgb = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)) # Tuple rgb
+    turtle.pencolor(rgb)
     turtle.pensize(pen_width)
     pen_width += 1
     turtle.forward(random_length)
