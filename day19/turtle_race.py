@@ -63,23 +63,34 @@ while poll_position:
     poll_position = False
     race_on = True
 
-winner = []
+    winner = []
 
-while race_on:
-    # Move turtles forwards with random steps and stop race when turtle get finish line (500, coor_y)
-    for turtle in all_turtles:
-        move_forwards(turtle)
-        check_finish_line(turtle)
+    while race_on:
+        
+        # Move turtles forwards with random steps and stop race when turtle get finish line (500, coor_y)
+        for turtle in all_turtles:
+            move_forwards(turtle)
+            check_finish_line(turtle)
     
-if winner[0] == user_input:
-    index = colours.index(winner[0])
-    print(f"The winner is the {winner[0]} {names[index]} turtle. You win!")
-else:
-    index = colours.index(winner[0])
-    print(f"Sorry, you have lost. The winner is the {winner[0]} {names[index]} turtle")
+        if race_on:
+            pass
+        else:
+            if winner[-1] == user_input:
+                index = colours.index(winner[-1])
+                print(f"The winner is the {winner[-1]} {names[index]} turtle. You win!")
+            else:
+                index = colours.index(winner[-1])
+                print(f"Sorry, you have lost. The winner is the {winner[-1]} {names[index]} turtle")
 
+            another_race = screen.textinput("Try another race", "Type 'y' for another race, or click screen for exit: ")
 
-
+            if another_race.lower() == "y":
+                new_coor_y = 160
+                for turtle in all_turtles:
+                    turtle.goto(-230, new_coor_y)
+                    new_coor_y -= 60
+                race_on = True
+                
 # Exit screen on click
 
 screen.exitonclick()
