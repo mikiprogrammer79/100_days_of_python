@@ -25,6 +25,7 @@ def clockwise():
 def clear():
     t.clear()
     t.setposition(0, 0)
+    t.setheading(0)
 
 screen.onkey(key="w", fun=move_forward)
 screen.onkey(key="s", fun=move_backward)
