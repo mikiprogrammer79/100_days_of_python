@@ -43,3 +43,5 @@ Creating Classes
 Turtle Graphics, Tuples and Importing Modules
 ### Day 19:
 Turtle Graphics, Tuples, Event Listeners, State, and Multiple Instances
+### Day 20:
+Snake Game (part I)
