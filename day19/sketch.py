@@ -24,6 +24,7 @@ def clockwise():
 
 def clear():
     t.clear()
+    t.penup()
     t.setposition(0, 0)
     t.setheading(0)
 
