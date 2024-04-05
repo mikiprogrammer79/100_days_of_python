@@ -11,6 +11,9 @@ screen.bgcolor("black") # Screen background color
 
 screen.title("The Python Game") # Screen Title
 
+screen.tracer(0) # turn off the tracer to help animation (show when update)
+
+
 tail = [(0, 0), (-20, 0), (-40, 0)] # List of segments coor
 
 snake_segments = []
@@ -26,14 +29,13 @@ for x_y in tail:
 
 # Move snake
 
-snake_segments.reverse()
-
 game_alive = True
 
 while game_alive:
     
     for seg in snake_segments:
         seg.forward(20)
+        screen.update()
 
 
 # Move snake: Animating the snake segments
