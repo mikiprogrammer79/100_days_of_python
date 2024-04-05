@@ -20,7 +20,16 @@ screen.tracer(0) # turn off the tracer to help animation (show when update)
 
 # Snake 
 
-snake = Snake()
+snake = Snake() # Create snake body
+
+# Start screen event listeners
+
+screen.listen()
+
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.right, "Right")
+screen.onkey(snake.left, "Left")
 
 game_alive = True
 
@@ -30,7 +39,7 @@ while game_alive:
 
     time.sleep(0.1) # Sleep for 1 second to avoid flashing (snake speed)
 
-    snake.move_forward()    
+    snake.move_forward()    # Move snake
     
         
 
