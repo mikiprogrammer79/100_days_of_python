@@ -1,14 +1,16 @@
 from turtle import Turtle
 
+START_POSITION = [(0, 0), (-20, 0), (-40, 0)]
+STEP_FORWARD = 20
+
 class Snake:
 
     def __init__(self):
-        self.position = [(0, 0), (-20, 0), (-40, 0)]
         self.snake_objects = []    
         self.create_body()
 
     def create_body(self):
-        for position in self.position:
+        for position in START_POSITION:
             snake = Turtle(shape="square")
             snake.penup()
             snake.color("White")
@@ -22,4 +24,4 @@ class Snake:
             new_y = self.snake_objects[index -1].ycor()
             self.snake_objects[index].goto(new_x, new_y)
 
-        self.snake_objects[0].forward(20)        
+        self.snake_objects[0].forward(STEP_FORWARD)        
