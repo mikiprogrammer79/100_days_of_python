@@ -33,11 +33,18 @@ game_alive = True
 
 while game_alive:
     
-    screen.update()
+    screen.update() # Update screen 
+
+    time.sleep(0.1) # Sleep for 1 second to avoid flashing
+
+    for index in range(len(snake_segments) - 1, 0, -1): # (start=3, stop=0, step=-1)
+        new_x = snake_segments[index - 1].xcor()
+        new_y = snake_segments[index -1].ycor()
+        snake_segments[index].goto(new_x, new_y)
+        print(f"{new_x, new_y}")
     
-    for seg in snake_segments:
-        seg.forward(20)
-        time.sleep(0.5) # Sleep for 1 second to avoid flashing
+    snake_segments[0].forward(20)
+        
 
 
 # Move snake: Animating the snake segments
