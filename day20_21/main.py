@@ -1,7 +1,7 @@
 # Snake Game
 
 from turtle import Turtle, Screen
-
+import time
 
 screen = Screen()
 
@@ -33,9 +33,11 @@ game_alive = True
 
 while game_alive:
     
+    screen.update()
+    
     for seg in snake_segments:
         seg.forward(20)
-        screen.update()
+        time.sleep(0.5) # Sleep for 1 second to avoid flashing
 
 
 # Move snake: Animating the snake segments
