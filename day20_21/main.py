@@ -2,6 +2,10 @@
 
 from turtle import Turtle, Screen
 import time
+from snake import Snake
+
+
+# Screen setup
 
 screen = Screen()
 
@@ -14,20 +18,9 @@ screen.title("The Python Game") # Screen Title
 screen.tracer(0) # turn off the tracer to help animation (show when update)
 
 
-tail = [(0, 0), (-20, 0), (-40, 0)] # List of segments coor
+# Snake 
 
-snake_segments = []
-
-# Create a snake body (3 squares 20x20px)
-
-for x_y in tail:
-    segment = Turtle(shape= "square")
-    segment.penup()
-    segment.color("white")
-    segment.goto(x_y)
-    snake_segments.append(segment)
-
-# Move snake
+snake = Snake()
 
 game_alive = True
 
@@ -35,15 +28,10 @@ while game_alive:
     
     screen.update() # Update screen 
 
-    time.sleep(0.1) # Sleep for 1 second to avoid flashing
+    time.sleep(0.1) # Sleep for 1 second to avoid flashing (snake speed)
 
-    for index in range(len(snake_segments) - 1, 0, -1): # (start=3, stop=0, step=-1)
-        new_x = snake_segments[index - 1].xcor()
-        new_y = snake_segments[index -1].ycor()
-        snake_segments[index].goto(new_x, new_y)
-        print(f"{new_x, new_y}")
+    snake.move_forward()    
     
-    snake_segments[0].forward(20)
         
 
 
