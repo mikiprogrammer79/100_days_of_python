@@ -45,3 +45,5 @@ Turtle Graphics, Tuples and Importing Modules
 Turtle Graphics, Tuples, Event Listeners, State, and Multiple Instances
 ### Day 20:
 Snake Game (part I): Create the snake body; Move the snake; Control the snake.
+### Day 21:
+Snake Game (part II): Detect collision with food; Create a scoreboard; Detect collision with wall; Detect collision with tail.
