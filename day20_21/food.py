@@ -11,10 +11,11 @@ class Food(Turtle):
         self.speed("fastest")
         self.show_food()
         
-        
+
     def show_food(self):
         random_x = random.randint(-250, 250)
         random_y = random.randint(-250, 250)
         self.goto(random_x, random_y)
+        
 
     

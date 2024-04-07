@@ -48,26 +48,27 @@ while game_alive:
     # Detect collision with food using Turtle.distance(instance)
     if snake.head.distance(food) < 15:
         food.show_food()
+        snake.add_segment()
         score.show_score()
 
-    # Detect collision with wall (x and y = 300/-300)
+    # Detect collision with wall (x and y = 300/-300. Segment 20x20px)
     x = snake.head.xcor()
     y = snake.head.ycor()
     if x >= 290 or x <= -290 or y >= 290 or y <=-290 :
         game_alive = False
         score.game_over()
-        
+
+# Detect collision with tail
+
+    for segment in snake.snake_objects:
+        if snake.snake_objects.index(segment) != 0:
+            if snake.head.distance(segment) < 10:
+                score.game_over()
+                game_alive = False    
 
 
-# Move snake: Animating the snake segments
+                
 
-
-
-
-
-
-
-
-
+# Exit screen on click
 screen.exitonclick() # Exit screen on click
 

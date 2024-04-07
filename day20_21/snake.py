@@ -18,6 +18,13 @@ class Snake:
             snake.goto(position)
             self.snake_objects.append(snake)
         
+    def add_segment(self):
+        new_segment = Turtle(shape="square")
+        new_segment.penup()
+        new_segment.color("white")
+        new_segment.goto(self.snake_objects[-1].position())
+        self.snake_objects.append(new_segment)
+        
 
     def move_forward(self):
         for index in range(len(self.snake_objects) - 1, 0, -1): # (start=3, stop=0, step=-1)
