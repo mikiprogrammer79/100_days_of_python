@@ -3,6 +3,7 @@
 from turtle import Turtle, Screen
 import time
 from snake import Snake
+from food import Food
 
 
 # Screen setup
@@ -21,6 +22,7 @@ screen.tracer(0) # turn off the tracer to help animation (show when update)
 # Snake 
 
 snake = Snake() # Create snake body
+food = Food()
 
 # Start screen event listeners
 
@@ -41,6 +43,11 @@ while game_alive:
 
     snake.move_forward()    # Move snake
     
+    # Detect collision with food using Turtle.distance(instance)
+    if snake.head.distance(food) < 15:
+        food.show_food()
+
+
         
 
 
