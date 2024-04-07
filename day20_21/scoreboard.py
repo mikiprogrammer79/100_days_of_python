@@ -1,15 +1,19 @@
-from turtle import Screen
+from turtle import Turtle
 
-
-class Scoreboard(Screen):
-
+class Scoreboard(Turtle):
     def __init__(self):
         super().__init__()
         self.score = 0
+        self.color("white")
+        self.penup()
+        self.goto(0, 270)
         self.show_score()
+        self.hideturtle()
+        
 
     def show_score(self):
-        self.title(f"Score: {self.score}")
+        self.clear()
+        self.write(f"Score: {self.score}", align="center", font=("Arial", 24, "normal"))
         self.score += 1
 
     
