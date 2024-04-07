@@ -50,6 +50,12 @@ while game_alive:
         food.show_food()
         score.show_score()
 
+    # Detect collision with wall (x and y = 300/-300)
+    x = snake.head.xcor()
+    y = snake.head.ycor()
+    if x >= 290 or x <= -290 or y >= 290 or y <=-290 :
+        game_alive = False
+        score.game_over()
         
 
 
