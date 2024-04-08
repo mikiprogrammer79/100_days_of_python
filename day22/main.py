@@ -2,6 +2,7 @@
 
 from turtle import Turtle, Screen
 from paddle import Paddle
+from ball import Ball
 
 
 # Create the screen
@@ -16,6 +17,8 @@ screen.tracer(0) # Turn off animation
 right_paddle = Paddle(350)
 left_paddle = Paddle(-350)
 
+# Create the ball and make it move across the screen
+ball = Ball()
     # Event Listeners
 screen.listen()
 
@@ -28,8 +31,8 @@ screen.onkey(left_paddle.move_down, "s")
 game_alive = True
 while game_alive:
     screen.update()
+    
 
-# Create the ball and make it move across the screen
 # Detect collision with wall and bounce
 # Detect collision with paddle
 # Detect when paddle misses the ball
