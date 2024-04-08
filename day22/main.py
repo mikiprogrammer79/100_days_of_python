@@ -12,8 +12,9 @@ screen.title("The Pong Game") # Creen window title
 screen.tracer(0) # Turn off animation
 
 
-# Create a move a paddle
-right_paddle = Paddle()
+# Create a move a paddle right_paddle and left_paddle
+right_paddle = Paddle(350)
+left_paddle = Paddle(-350)
 
     # Event Listeners
 screen.listen()
@@ -25,7 +26,6 @@ game_alive = True
 while game_alive:
     screen.update()
 
-# Create another paddle
 # Create the ball and make it move across the screen
 # Detect collision with wall and bounce
 # Detect collision with paddle
