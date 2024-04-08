@@ -17,8 +17,8 @@ right_paddle = Paddle()
     # Event Listeners
 screen.listen()
 
-screen.onkey(left_paddle.move_up, "Up")
-screen.onkey(left_paddle.move_down, "Down")
+screen.onkey(right_paddle.move_up, "Up")
+screen.onkey(right_paddle.move_down, "Down")
 
 
 
