@@ -9,6 +9,12 @@ class Ball(Turtle):
         self.shape("circle")
         self.color("white")
         self.penup()
+        
 
+    def move_ball(self, slope):
+        x = self.xcor() + 1
+        y = self.ycor() + slope
+        # Move ball
+        self.setposition(x, y)    
 
    

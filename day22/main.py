@@ -19,6 +19,7 @@ left_paddle = Paddle(-350)
 
 # Create the ball and make it move across the screen
 ball = Ball()
+
     # Event Listeners
 screen.listen()
 
@@ -28,12 +29,21 @@ screen.onkey(left_paddle.move_up, "w")
 screen.onkey(left_paddle.move_down, "s")
 
 
+slope = 1
 game_alive = True
 while game_alive:
     screen.update()
     
+    # Detect Collision with wall
+    if ball.ycor() >= 290 or ball.ycor() <= -290:
+        slope *= -1
 
-# Detect collision with wall and bounce
+    # Move ball    
+    ball.move_ball(slope)
+
+
+    
+
 # Detect collision with paddle
 # Detect when paddle misses the ball
 # Keep score
