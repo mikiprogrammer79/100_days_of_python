@@ -21,6 +21,9 @@ screen.listen()
 
 screen.onkey(right_paddle.move_up, "Up")
 screen.onkey(right_paddle.move_down, "Down")
+screen.onkey(left_paddle.move_up, "w")
+screen.onkey(left_paddle.move_down, "s")
+
 
 game_alive = True
 while game_alive:
