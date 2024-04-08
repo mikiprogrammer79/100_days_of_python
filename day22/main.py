@@ -45,9 +45,9 @@ while game_alive:
     if ball.ycor() >= 290 or ball.ycor() <= -290:
         slope *= -1
 
-    # Detect collision with paddle
+    # Detect collision with paddle * 1.2 to increase speed
     if ball.distance(left_paddle) < 50 and ball.xcor() < -330 :
-        direction *= -1
+        direction *= -1.2
     elif ball.distance(right_paddle) < 50 and ball.xcor() > 330:
         direction *= -1
     
@@ -61,12 +61,13 @@ while game_alive:
         ball.goto(0, 0)
         # Keep score
         score.l_point()
+        direction = 1 # Back to initial speed
     elif  ball.xcor() < -370:
         time.sleep(1.5)
         ball.goto(0, 0)
         # Keep score
         score.r_point()
-
+        direction = 1 # back to normal speed
 
 
 screen.exitonclick()
