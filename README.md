@@ -47,3 +47,5 @@ Turtle Graphics, Tuples, Event Listeners, State, and Multiple Instances
 Snake Game (part I): Create the snake body; Move the snake; Control the snake.
 ### Day 21:
 Snake Game (part II): Detect collision with food; Create a scoreboard; Detect collision with wall; Detect collision with tail.
+### Day 22:
+The Pong Game
