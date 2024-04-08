@@ -12,13 +12,15 @@ screen.title("The Pong Game") # Creen window title
 
 
 # Create a move a paddle
-left_paddle = Paddle()
+right_paddle = Paddle()
 
     # Event Listeners
 screen.listen()
 
 screen.onkey(left_paddle.move_up, "Up")
 screen.onkey(left_paddle.move_down, "Down")
+
+
 
 # Create another paddle
 # Create the ball and make it move across the screen

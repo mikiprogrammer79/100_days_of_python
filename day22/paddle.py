@@ -7,7 +7,7 @@ class Paddle(Turtle):
         self.shape("square")
         self.shapesize(stretch_wid=5, stretch_len=1)
         self.penup()
-        self.goto(-350, 0)
+        self.goto(350, 0)
 
     def move_up(self):
         self.setheading(90)
