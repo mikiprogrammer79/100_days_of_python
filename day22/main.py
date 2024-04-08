@@ -9,6 +9,7 @@ screen = Screen()
 screen.setup(width=800, height=600)
 screen.bgcolor("black") # Background color
 screen.title("The Pong Game") # Creen window title
+screen.tracer(0) # Turn off animation
 
 
 # Create a move a paddle
@@ -20,7 +21,9 @@ screen.listen()
 screen.onkey(right_paddle.move_up, "Up")
 screen.onkey(right_paddle.move_down, "Down")
 
-
+game_alive = True
+while game_alive:
+    screen.update()
 
 # Create another paddle
 # Create the ball and make it move across the screen
