@@ -2,6 +2,7 @@
 
 import time
 from turtle import Turtle, Screen
+from car_manager import CarManager
 
 
 screen = Screen()
@@ -13,4 +14,3 @@ game_alive = True
 while game_alive:
     time.sleep(0.1)
     screen.update()
-    
