@@ -3,6 +3,8 @@
 import time
 from turtle import Turtle, Screen
 from car_manager import CarManager
+from player import Player
+
 
 
 screen = Screen()
