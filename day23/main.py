@@ -14,7 +14,8 @@ screen.tracer(0)
 
 
 player = Player()
-
+score = Scoreboard()
+game_over = Scoreboard()
 
 # Screen event listeners
 screen.listen()
@@ -28,6 +29,7 @@ game_alive = True
 while game_alive:
     time.sleep(0.1)
     screen.update()
+    score.show_score(level + 1)
     if green_light == 6: 
         car = CarManager()
         traffic.append(car)
@@ -39,5 +41,9 @@ while game_alive:
             level += 1
         obj.move(level)
 
+        # Detect collision with cars
+        if obj.distance(player) < 20:
+            game_over.game_over()
+            game_alive = False 
 
 screen.exitonclick()

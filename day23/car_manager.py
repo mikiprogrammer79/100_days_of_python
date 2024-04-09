@@ -20,5 +20,4 @@ class CarManager(Turtle):
         
     def move(self, level):  
         self.backward(STARTING_MOVE_DISTANCE + level * MOVE_INCREMENT)
-        print(f"speed: {STARTING_MOVE_DISTANCE + level * MOVE_INCREMENT}")
 
