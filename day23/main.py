@@ -23,6 +23,7 @@ screen.onkey(fun=player.move, key="Up")
 traffic = []
 green_light = 6
 
+level = 0
 game_alive = True
 while game_alive:
     time.sleep(0.1)
@@ -33,12 +34,10 @@ while game_alive:
         green_light = 0
     green_light += 1
     for obj in traffic:
-        obj.move()
+        if player.ycor() >= 200:
+            player.finish_line()
+            level += 1
+        obj.move(level)
 
-    if player.ycor() >= 200:
-        player.finish_line()
-        for obj in traffic:
-            obj.level_up()
-            
 
 screen.exitonclick()
