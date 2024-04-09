@@ -51,3 +51,5 @@ Snake Game (part II): Detect collision with food; Create a scoreboard; Detect co
 The Pong Game
 ### Day 23:
 Turtle Crossing Game (Turtle capstone project)
+### Day 24:
+Working with Local Files and Directories
