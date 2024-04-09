@@ -35,6 +35,10 @@ while game_alive:
     for obj in traffic:
         obj.move()
 
-    player.finish_line()
+    if player.ycor() >= 200:
+        player.finish_line()
+        for obj in traffic:
+            obj.level_up()
+            
 
 screen.exitonclick()

@@ -18,5 +18,4 @@ class Player(Turtle):
         self.forward(MOVE_DISTANCE)
 
     def finish_line(self):
-        if self.ycor() >= 200:
-            self.goto(STARTING_POSITION)
+        self.goto(STARTING_POSITION)
