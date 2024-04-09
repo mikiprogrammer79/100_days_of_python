@@ -35,6 +35,6 @@ while game_alive:
     for obj in traffic:
         obj.move()
 
-
+    player.finish_line()
 
 screen.exitonclick()
