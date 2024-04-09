@@ -15,16 +15,25 @@ screen.tracer(0)
 
 player = Player()
 
+
 # Screen event listeners
 screen.listen()
 screen.onkey(fun=player.move, key="Up")
 
+traffic = []
+green_light = 6
 
 game_alive = True
 while game_alive:
     time.sleep(0.1)
     screen.update()
-
+    if green_light == 6: 
+        car = CarManager()
+        traffic.append(car)
+        green_light = 0
+    green_light += 1
+    for obj in traffic:
+        obj.move()
 
 
 
