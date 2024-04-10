@@ -53,3 +53,5 @@ The Pong Game
 Turtle Crossing Game (Turtle capstone project)
 ### Day 24:
 Working with Local Files and Directories and update Snake Game saving highest score
+### Day 25:
+Working with CSV Files and Analysing Data with Pandas
