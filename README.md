@@ -52,4 +52,4 @@ The Pong Game
 ### Day 23:
 Turtle Crossing Game (Turtle capstone project)
 ### Day 24:
-Working with Local Files and Directories
+Working with Local Files and Directories and update Snake Game saving highest score
