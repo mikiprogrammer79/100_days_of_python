@@ -25,6 +25,12 @@ class Snake:
         new_segment.goto(self.snake_objects[-1].position())
         self.snake_objects.append(new_segment)
         
+    def reset(self):
+        for segment in self.snake_objects:
+            segment.goto(1000, 1000)  # Send collisioned snake outside the screen
+        self.snake_objects.clear()
+        self.create_body()
+        self.head = self.snake_objects[0]
 
     def move_forward(self):
         for index in range(len(self.snake_objects) - 1, 0, -1): # (start=3, stop=0, step=-1)
