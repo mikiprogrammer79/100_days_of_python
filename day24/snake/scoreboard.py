@@ -7,6 +7,7 @@ class Scoreboard(Turtle):
     def __init__(self):
         super().__init__()
         self.score = 0
+        self.high_score = 0
         self.color("white")
         self.penup()
         self.goto(0, 270)
@@ -16,7 +17,7 @@ class Scoreboard(Turtle):
 
     def show_score(self):
         self.clear()
-        self.write(f"Score: {self.score}", align=ALIGMENT, font=FONT )
+        self.write(f"Score: {self.score} / High Score: {self.high_score}", align=ALIGMENT, font=FONT )
         self.score += 1
 
     def game_over(self):
