@@ -55,9 +55,11 @@ while game_alive:
     x = snake.head.xcor()
     y = snake.head.ycor()
     if x >= 290 or x <= -290 or y >= 290 or y <=-290 :
-        game_alive = False
-        score.game_over()
-
+        # game_alive = False
+        # score.game_over()
+        score.reset()
+        snake.reset()
+        
 # Detect collision with tail
 
     # for segment in snake.snake_objects:
@@ -68,9 +70,10 @@ while game_alive:
 
     for segment in snake.snake_objects[1:]:
         if snake.head.distance(segment) < 10:
-            score.game_over()
-            game_alive = False
-                
+            # score.game_over()
+            # game_alive = False
+            score.reset()    
+            snake.reset()
 
 # Exit screen on click
 screen.exitonclick() # Exit screen on click
