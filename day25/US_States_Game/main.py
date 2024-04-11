@@ -23,6 +23,8 @@ game_alive = True
 while game_alive:
     user_input = screen.textinput(f"{points}/50 Guess the US States", "Type a US State: ")
     records.append(user_input.title())
+    if user_input.lower() == "exit":
+        break
     if user_input.title() in states:
         answer = Turtle()
         answer.hideturtle()
@@ -37,8 +39,6 @@ while game_alive:
     else:
         pass
 
-
-screen.exitonclick()
 
 # Get coordenates on screen click
 # def get_coordenates(x, y):
