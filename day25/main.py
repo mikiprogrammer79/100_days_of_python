@@ -64,4 +64,8 @@ new_data_dict = {
 
 data_frame = pandas.DataFrame(new_data_dict)
 
-print(data_frame)
+# print(data_frame)
+
+# Create a dataframe into a csv file
+data_frame.to_csv("day25/student_scores.csv")
+ 
