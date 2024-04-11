@@ -49,4 +49,9 @@ monday = data[data.day == "Monday"]
 
 # Get row with highest temperature of the week
 max_temp_day = data[data.temp == max_temp]
-print(max_temp_day) 
+# print(max_temp_day) 
+
+# Convert Monday temperature from Celsius to Fahrenheit (C * 9/5 + 32)
+monday_celsius = data.temp[data.day == 'Monday']
+monday_fahrenheit = monday_celsius * 9 / 5 + 32
+print(monday_fahrenheit)
