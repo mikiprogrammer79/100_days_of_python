@@ -32,4 +32,9 @@ data_list = data['temp'].to_list() # Convert Series to a list
 
 # Calculate average temperature
 avg_temp = data['temp'].mean()
-print(round(avg_temp, 2))
+print(f"Average temperature: {round(avg_temp, 2)}")
+
+# Get the maximum temperature
+max_temp = data['temp'].max()
+print(f"Maximum temperature: {max_temp}")
+
