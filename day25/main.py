@@ -27,8 +27,12 @@ data_dict = data.to_dict() # Convert DataFrame to a dictionary
 
 data_list = data['temp'].to_list() # Convert Series to a list
 
-print(data_dict)
-print(data_list)
+# print(data_dict)
+# print(data_list)
 
-
-
+# Calculate average temperature
+sum = 0
+for value in data_list:
+    sum += value
+avg_temp = sum / len(data_list)
+print(round(avg_temp, 2))
