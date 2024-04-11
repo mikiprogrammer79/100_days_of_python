@@ -55,3 +55,13 @@ max_temp_day = data[data.temp == max_temp]
 monday_celsius = data.temp[data.day == 'Monday']
 monday_fahrenheit = monday_celsius * 9 / 5 + 32
 print(monday_fahrenheit)
+
+# Create a new DataFrame from scratch
+new_data_dict = {
+    "students": ["Maria", "Anna", "John", "Kate"],
+    "scores": [99, 78, 89, 67]
+}
+
+data_frame = pandas.DataFrame(new_data_dict)
+
+print(data_frame)
