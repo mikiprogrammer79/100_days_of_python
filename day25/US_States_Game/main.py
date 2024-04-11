@@ -36,8 +36,12 @@ while game_alive:
         answer.write(f"{user_input.title()}")
         if user_input.title() not in records[:-1]:
             points += 1
-    else:
-        pass
+            states.remove(user_input.title())
+
+# Create a csv file with the missing states
+new_df = pandas.DataFrame(states)
+
+new_df.to_csv("day25/US_States_Game/missing_states.csv")
 
 
 # Get coordenates on screen click
