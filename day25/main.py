@@ -31,5 +31,5 @@ data_list = data['temp'].to_list() # Convert Series to a list
 # print(data_list)
 
 # Calculate average temperature
-avg_temp = sum(data_list) / len(data_list)
+avg_temp = data['temp'].mean()
 print(round(avg_temp, 2))
