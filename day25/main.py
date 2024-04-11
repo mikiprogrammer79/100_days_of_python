@@ -41,3 +41,8 @@ print(f"Maximum temperature: {max_temp}")
 # Get minimum temperature
 print(data.temp.min()) # DataFrame.column_name -> Series
 
+# Get data of one row. Thursday
+thursday = data[data.day == "Thursday"]
+monday = data[data.day == "Monday"]
+print(thursday)
+print(monday)
