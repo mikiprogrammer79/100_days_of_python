@@ -38,3 +38,6 @@ print(f"Average temperature: {round(avg_temp, 2)}")
 max_temp = data['temp'].max()
 print(f"Maximum temperature: {max_temp}")
 
+# Get minimum temperature
+print(data.temp.min()) # DataFrame.column_name -> Series
+
