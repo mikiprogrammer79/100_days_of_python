@@ -13,4 +13,8 @@ alpha_dict = {row.letter:row.code for (index, row) in df.iterrows()}
 
 #TODO 2. Create a list of the phonetic code words from a word that the user inputs.
 
-print(alpha_dict)
+user_input = input("Type a word or sentence: ").upper()
+
+phonetic_code = [alpha_dict[item] for item in user_input if item != " "]
+
+print(phonetic_code)
