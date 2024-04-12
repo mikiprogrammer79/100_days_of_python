@@ -57,3 +57,5 @@ Working with Local Files and Directories and update Snake Game saving highest sc
 Working with CSV Files and Analysing Data with Pandas
 ### Day 26:
 List and Dictionary Comprehensions
+### Day 27:
+Graphical User Interfaces (GUI) with Tkinter and Function Arguments
