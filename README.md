@@ -59,3 +59,5 @@ Working with CSV Files and Analysing Data with Pandas
 List and Dictionary Comprehensions
 ### Day 27:
 Graphical User Interfaces (GUI) with Tkinter and Function Arguments
+### Day 28:
+Create a Pomodoro App
