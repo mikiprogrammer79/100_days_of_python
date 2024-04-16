@@ -5,7 +5,7 @@ from tkinter import *
 
 def convert():
     input = entry.get()
-    kilometers = int(input) * 1.6
+    kilometers = round(int(input) * 1.609, 2)
     value.config(text=kilometers)
 
 
