@@ -12,7 +12,7 @@ def convert():
 window = Tk()
 window.title("Mile to Km Converter")
 window.minsize(width=250, height=150)
-window.config(padx=10, pady=10)
+window.config(padx=10, pady=20)
 
 # Entry Miles
 entry = Entry(width=10)
@@ -34,6 +34,7 @@ value.grid(column=1, row=1)
 
 # Label Km
 km = Label(text="Km", font=("Courier", 14, "normal"))
+km.config(padx=0, pady=20)
 km.grid(column=2, row=1)
 
 # Button Calculate
