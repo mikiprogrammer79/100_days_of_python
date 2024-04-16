@@ -4,7 +4,9 @@ from tkinter import *
 
 
 def convert():
-    pass
+    input = entry.get()
+    kilometers = int(input) * 1.6
+    value.config(text=kilometers)
 
 
 window = Tk()
@@ -14,6 +16,7 @@ window.config(padx=10, pady=10)
 
 # Entry Miles
 entry = Entry(width=10)
+entry.focus()   # Puts cursor in entry
 entry.grid(column=1, row=0)
 
 
