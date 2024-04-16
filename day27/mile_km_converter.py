@@ -3,6 +3,10 @@
 from tkinter import *
 
 
+def convert():
+    pass
+
+
 window = Tk()
 window.title("Mile to Km Converter")
 window.minsize(width=250, height=150)
@@ -29,6 +33,9 @@ value.grid(column=1, row=1)
 km = Label(text="Km", font=("Courier", 14, "normal"))
 km.grid(column=2, row=1)
 
+# Button Calculate
+button = Button(text="Calculate", command=convert)
+button.grid(column=1, row=2)
 
 
 
