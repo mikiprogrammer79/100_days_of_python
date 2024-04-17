@@ -8,9 +8,9 @@ RED = "#e7305b"
 GREEN = "#9bdeac"
 YELLOW = "#f7f5dd"
 FONT_NAME = "Courier"
-WORK_MIN = 0.25
-SHORT_BREAK_MIN = 0.5
-LONG_BREAK_MIN = 0.20
+WORK_MIN = 25
+SHORT_BREAK_MIN = 5
+LONG_BREAK_MIN = 20
 repetitions = 0
 # ---------------------------- TIMER RESET ------------------------------- # 
 
