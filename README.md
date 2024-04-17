@@ -61,3 +61,6 @@ List and Dictionary Comprehensions
 Graphical User Interfaces (GUI) with Tkinter and Function Arguments
 ### Day 28:
 Create a Pomodoro App
+### Day 29:
+Create a Password Manager
+
