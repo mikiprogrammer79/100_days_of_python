@@ -19,6 +19,7 @@ LONG_BREAK_MIN = 20
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Pomodoro")
+window.config(padx=100, pady=50)
 
 canvas = Canvas(width=200, height=224)   # Create a Canvas Widget with W and H similar to the image
 tomato_img = PhotoImage(file="day28/tomato.png") # Read the image file
