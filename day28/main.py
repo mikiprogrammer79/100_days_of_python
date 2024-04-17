@@ -1,4 +1,6 @@
 from tkinter import *
+import math
+
 
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
@@ -9,17 +11,36 @@ FONT_NAME = "Courier"
 WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
-
+repetitions = 0
 # ---------------------------- TIMER RESET ------------------------------- # 
 
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
 def start_timer():
-    count_down(10)
+    global repetitions
+    repetitions += 1
+    if repetitions == 1 or repetitions == 3 or repetitions == 5 or repetitions == 7:
+        count_down(WORK_MIN * 60) 
+        label.config(text="Work", fg=GREEN)
+    elif repetitions == 2 or repetitions == 4 or repetitions == 6:
+        count_down(SHORT_BREAK_MIN * 60)
+        label.config(text="Break", fg=PINK)
+    elif repetitions == 8:
+        count_down(LONG_BREAK_MIN * 60)
+        label.config(text="Break", fg=RED)
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 def count_down(count):
-    canvas.itemconfig(timer_text, text=count)
+    minutes = math.floor(count / 60)
+    seconds = count % 60
+    
+    if seconds < 10:
+        seconds = f"0{seconds}"
+        
+    canvas.itemconfig(timer_text, text=f"{minutes}:{seconds}")
+    
     if count > 0:
         window.after(1000, count_down, count-1)
+    else:
+        start_timer()
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Pomodoro")
