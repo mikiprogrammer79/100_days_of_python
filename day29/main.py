@@ -6,7 +6,8 @@ import string
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
-def password():
+def gen_password():
+    password_entry.delete(0, END)
     letters_num = 8
     symbols_num = 4
     numbers_num = 4
@@ -34,7 +35,6 @@ def password():
     new_password = "".join(password)
 
     password_entry.insert(0, f"{new_password}")
-
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
 def save_password():
@@ -85,7 +85,7 @@ password_entry = Entry(width=21)
 password_entry.grid(column=1, row=3, sticky=W)
 
 # Buttons
-generate_button = Button(text="Generate Password")
+generate_button = Button(text="Generate Password", command=gen_password)
 generate_button.grid(column=1, row=3, sticky=E)
 
 add_button = Button(text="Add", width=36, command=save_password)
