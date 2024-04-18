@@ -1,7 +1,39 @@
 from tkinter import *
 from tkinter import messagebox  # messagebox is not a class
+import random
+import string
+
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
+
+def password():
+    letters_num = 8
+    symbols_num = 4
+    numbers_num = 4
+    
+    letter_list = list(string.ascii_letters)
+    user_letters = []
+    for i in range(0, letters_num):
+        random_number = random.randint(0, (len(letter_list) -1))
+        user_letters.append(letter_list[random_number])
+    
+    symbol_list = ["!", "@", "#", "$", "%", "&", "*", "(", ")", "?", "/", "+", "="]
+    user_symbols = []
+    for i in range(0, symbols_num):
+        random_number = random.randint(0, (len(symbol_list) - 1))
+        user_symbols.append(symbol_list[random_number])
+    
+    number_list = list(string.digits)
+    user_numbers = []
+    for i in range(0, numbers_num):
+        random_number = random.randint(0, (len(number_list) - 1))
+        user_numbers.append(number_list[random_number])
+    
+    password = user_letters + user_symbols + user_numbers
+    shuffle_passwd = random.shuffle(password) 
+    new_password = "".join(password)
+
+    password_entry.insert(0, f"{new_password}")
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
