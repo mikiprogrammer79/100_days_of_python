@@ -1,13 +1,21 @@
 from tkinter import *
-
+from tkinter import messagebox  # messagebox is not a class
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
 def save_password():
-    with open("day29/data.tx", mode="a") as file:
-        file.write(f"{website_entry.get()} | {user_entry.get()} | {password_entry.get()}\n")
+    site = website_entry.get()
+    email = user_entry.get()
+    passwd = password_entry.get()
+
+    info = messagebox.askokcancel(title=site, message=f"Are these details ok?\nEmail: {email}\nPassword: {passwd}")
+    
+    if info:
+        with open("day29/data.tx", mode="a") as file:
+            file.write(f"{site} | {email} | {passwd}\n")
+    
     website_entry.delete(0, END)
     password_entry.delete(0, END)
 # ---------------------------- UI SETUP ------------------------------- #
