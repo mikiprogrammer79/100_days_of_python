@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import messagebox  # messagebox is not a class
 import random
 import string
+import pyperclip  # To auto copy/paste clipboard functions
 
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
@@ -35,6 +36,7 @@ def gen_password():
     new_password = "".join(password)
 
     password_entry.insert(0, f"{new_password}")
+    pyperclip.copy(new_password)
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
 def save_password():
