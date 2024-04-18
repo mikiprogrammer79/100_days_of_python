@@ -63,5 +63,7 @@ Graphical User Interfaces (GUI) with Tkinter and Function Arguments
 Create a Pomodoro App
 ### Day 29:
 Create a Password Manager to store and generate passwords
+### Day 30:
+Errors, Exceptions and Saving JSON Data
 
 
