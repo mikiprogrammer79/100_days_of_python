@@ -20,6 +20,7 @@ canvas.grid(column=1, row=0)
 website = Label(text="Website:")
 website.grid(column=0, row=1)
 website_entry = Entry(width=35)
+website_entry.focus()
 website_entry.grid(column=1, row=1, sticky=W)
 
 user_name = Label(text="Email/Username:")
