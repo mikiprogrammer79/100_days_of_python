@@ -10,14 +10,18 @@ def save_password():
     email = user_entry.get()
     passwd = password_entry.get()
 
-    info = messagebox.askokcancel(title=site, message=f"Are these details ok?\nEmail: {email}\nPassword: {passwd}")
+    if site == "" or passwd == "" or email == "": 
+        messagebox.showinfo(title="Oops", message="Please, do not leave any field empty!")
+        info = False
+    else:
+        info = messagebox.askokcancel(title=site, message=f"Are these details ok?\nEmail: {email}\nPassword: {passwd}")
     
-    if info:
-        with open("day29/data.tx", mode="a") as file:
-            file.write(f"{site} | {email} | {passwd}\n")
+        if info:
+            with open("day29/data.tx", mode="a") as file:
+                file.write(f"{site} | {email} | {passwd}\n")
     
-    website_entry.delete(0, END)
-    password_entry.delete(0, END)
+        website_entry.delete(0, END)
+        password_entry.delete(0, END)
 # ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
