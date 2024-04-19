@@ -20,3 +20,5 @@ finally:
     file.close()
     print("file closed")
 
+# Raise an error that you made up
+    raise TypeError("This is an error that I made up")
