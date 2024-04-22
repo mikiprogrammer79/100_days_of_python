@@ -76,6 +76,11 @@ def save_password():
     
         website_entry.delete(0, END)
         password_entry.delete(0, END)
+
+# ---------------------------- PASSWORD FINDER ------------------------------- #
+def find_password():
+    pass
+
 # ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
@@ -91,9 +96,12 @@ canvas.grid(column=1, row=0)
 # Labels and Entries
 website = Label(text="Website:")
 website.grid(column=0, row=1)
-website_entry = Entry(width=35)
+website_entry = Entry(width=21)
 website_entry.focus()
 website_entry.grid(column=1, row=1, sticky=W)
+
+search = Button(text="Search", command=find_password, width=13)
+search.grid(column=1, row=1, sticky=E)
 
 user_name = Label(text="Email/Username:")
 user_name.grid(column=0, row=2)
