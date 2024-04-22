@@ -60,14 +60,19 @@ def save_password():
         info = messagebox.askokcancel(title=site, message=f"Are these details ok?\nEmail: {email}\nPassword: {passwd}")
     
         if info:
-            # Reading old data
-            with open("day30/password_manager/data.json", mode="r") as data_file:
-                data = json.load(data_file)
-            # Updating old data as new data
-                data.update(new_data)
-            # Write updated data
-            with open("day30/password_manager/data.json", mode="w") as data_file:
-                json.dump(data, data_file, indent=4)
+            try:
+                # Reading old data
+                with open("day30/password_manager/data.json", mode="r") as data_file:
+                    data = json.load(data_file)
+                # Updating old data as new data
+                    data.update(new_data)
+            except FileNotFoundError:
+                data = new_data
+                
+            finally:
+                # Write updated data
+                with open("day30/password_manager/data.json", mode="w") as data_file:
+                    json.dump(data, data_file, indent=4)
     
         website_entry.delete(0, END)
         password_entry.delete(0, END)
