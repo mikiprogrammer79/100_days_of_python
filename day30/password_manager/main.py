@@ -79,7 +79,17 @@ def save_password():
 
 # ---------------------------- PASSWORD FINDER ------------------------------- #
 def find_password():
-    pass
+    site = website_entry.get()
+    email = user_entry.get()
+    passwd = password_entry.get()
+    
+    with open("day30/password_manager/data.json", mode="r") as data_file:
+        data = json.load(data_file)
+    
+        if site in data:
+            messagebox.showinfo(title=site, message=f"Email: {data[site]["email"]}\nPassword: {data[site]["password"]}")
+        else:
+            messagebox.showerror(title="Error", message="No details for the website exist")    
 
 # ---------------------------- UI SETUP ------------------------------- #
 
